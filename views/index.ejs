@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
-    <title>Document</title>
+    <title>URL Shortener</title>
 </head>
 <body>
     <div class = "container">
-        <h1>URL Shortner</h1>
+        <h1>URL Shortener</h1>
             <form action= "/shortURLs" method = "POST" class = "my-4 form-inline"> 
                 <label for="longURL" class = "sr-only"> URL </label>
                 <input required placeholder = "Original URL" type = "url" name = "longURL" id = "longURL" class = "form-control mr-2">
@@ -20,13 +20,19 @@
                     <tr>
                         <th>Full URL</th>
                         <th>Short URL</th>
+                        <th>Date Created</th>
+                        <th>Visits </th>
+                        <th>Last Accessed</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <% shortURLs.forEach(shortURL => { %>
+                    <% shortURLs.forEach(foundURL => { %>
                         <tr>
-                            <td><a href = "<%= shortURL.longURL %>"> <%= shortURL.longURL %> </a></td>
-                            <td><a href = "<%= shortURL.shortURL %>"> <%= shortURL.shortURL %> </a></td>
+                            <td><a href = "<%= foundURL.longURL %>"> <%= foundURL.longURL %> </a></td>
+                            <td><a href = "<%= foundURL.shortURL %>"> <%= foundURL.shortURL %> </a></td>
+                            <td><%= foundURL.dateCreated %> </td>
+                            <td><%= foundURL.visits %> </td>
+                            <td><%= foundURL.lastAccessed %> </td>
                         </tr>
                     <% }) %> 
                 </tbody>

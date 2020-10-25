@@ -9,7 +9,22 @@ const shortURLSchema = new mongoose.Schema({
     shortURL : {
         type: String, 
         required: true, 
-        default: shortId.generate // Generate short ID 
+        default: shortId.generate
+    }, 
+    dateCreated: {
+        type: Date, 
+        required: true,
+        default: Date()
+    },
+    visits :{
+        type: Number, 
+        required: true, 
+        default: 0 
+    },
+    lastAccessed: {
+        type: Date, 
+        required: true,
+        default: Date()
     }
 })
 
