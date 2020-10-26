@@ -25,7 +25,7 @@ const register = (req, res, next) => {
                 message: "Error! Please try again."
             })
         })
-    }); //
+    }); 
 }
 
 const login = (req, res, next) => {
@@ -58,7 +58,6 @@ const login = (req, res, next) => {
             })
         }
     })
-
 }
 
 module.exports = {
