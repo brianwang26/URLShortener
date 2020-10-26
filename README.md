@@ -1,4 +1,4 @@
-# URLShortner
+# URLShortener
 A web application which creates short URLs from long URLs. Demo is here: www.youtube.com/watch?v=ReDonEHHb78&feature=youtu.be
 
 ## Tech Stack
