@@ -1,5 +1,5 @@
 # URLShortner
-A web application which creates short URLs from long URLs
+A web application which creates short URLs from long URLs. Demo is here: www.youtube.com/watch?v=ReDonEHHb78&feature=youtu.be
 
 ## Tech Stack
 I implemented this project using Javascript, Express, and MongoDB. The frontend for this project can be found in ```index.ejs``` in the "views" folder. This is a simple rendering of our web application that allows the user to interact with the features of the URL Shortener. The routes for this project can be found in ```server.js``` This specifies the basic POST and GET routes that allow users to submit a long URL that they wish to shorten and be directed to a long URL from a shortened URL. Finally, the model for our shortened URL can be found in ```shortURL.js``` in the "models" folder. This describes the mongoose Schema on how the data for our URLs will be stored in our database. 
